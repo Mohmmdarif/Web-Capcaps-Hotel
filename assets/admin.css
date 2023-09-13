@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins';
+    background-color: #F2F5C8;
+}
+
+.fcontainer {
+    padding: 100px;
+}
+
+header {
+    font-family: 'Poppins';
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* --- label --- */
+label {
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 500;
+}
+/* --- label --- */
+
+
+/* --- buttonmenu --- */
+.fcontainer select {
+    width: 200px;
+    margin-left: 15px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #C1DEAE;
+    font-weight: 500;
+}
+/* --- buttonmenu --- */
+
+
+/* --- card --- */
+.card .option {
+    padding: 10px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.button {
+    text-align: center;
+    margin-left: 15px;
+}
+
+button {
+    width: 200px;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 2px;
+    text-align: center;
+    border-radius: 30px;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: #6bc8a3;
+}
+
+.card{
+    width: auto;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+    border-radius: 30px; 
+    padding: 20px;
+    /* background-color: #C1DEAE; */
+    background-color: #a9d78c;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: all .3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1,1.1);
+}
+
+.card .input {
+    height: 70px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card .input input{
+    width: 200px;
+    padding: 20px;
+    margin-left: 15px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 1px solid;
+    background-color: #C1DEAE;
+}
+
+.card .input select {
+    background-color: #C1DEAE;
+    padding: 10px;
+}
+/* --- card --- */
+
+
+/* --- Note --- */
+.card1 {
+    width: fit-content;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+    border-radius: 30px; 
+    padding: 20px;
+    background-color: #a9d78c;
+    margin-bottom: 30px;
+    transition: all .3s ease-in-out;
+}
+
+.card1:hover {
+    transform: scale(1.1,1.1);
+}
+
+.card1 .note {
+    padding: 20px;
+}
+
+.card1 .note sup {
+    color: red;
+}
+
+.card1 ol {
+    margin-left: 40px;
+    font-size: 16px;
+}
+
+.card1 ol li {
+    padding: 5px;
+    list-style-type: armenian;
+}
+
+.card1 .containerlist {
+    display: inline-flex;
+    margin-left: 15px;
+    text-align: center;
+    margin-top: auto;
+}
+/* --- Note --- */
+
+/* --- Table --- */
+.card .header_table {
+    padding: 15px;
+}
+
+table {
+    text-align: center;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* Warna table head */
+table tr th {
+    color: black;
+    font-weight: normal;
+}
+
+/* Hover row genap */
+table tr:hover {
+    background-color: #f5f5f5;
+}
+/* --- Table --- */
+
+.card span {
+    color: black;
+    font-weight: 500;
+    font-size: large;
+}
+
+.card a {
+    color: red;
+    text-decoration: none;
+}
+
+.card a:hover {
+    color: blue;
+}

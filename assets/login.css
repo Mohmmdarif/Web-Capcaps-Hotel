@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,210,1) 50%, rgba(252,176,69,1) 100%);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* selector Drag */
+::selection {
+    background: rgb(46, 46, 204);
+    color: white;
+}
+
+/* hide form */
+/* #login-form {
+    display: none;
+} */
+
+/* create Form */
+.form-box {
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 5% auto;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    overflow: hidden;
+}
+
+/* header box btn */
+.button-box {
+    /* display: inline-flex; */
+    width: 220px;
+    margin: 35px 75px;
+    position: relative;
+    border-radius: 30px;
+}
+
+.toggle-btn {
+    padding: 10px 25px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+    color: white;
+}
+
+/* background header btn */
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,143,1) 51%, rgba(252,176,69,1) 100%);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.input-group-login {
+    top: 150px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-group-register {
+    top: 120px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border: 0;
+    border-bottom: 1px solid orangered;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn {
+    width: 85%;
+    padding: 7px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    /* background: #f3c693; */
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    color: white;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.check-box {
+    margin: 30px 10px 34px 0;
+}
+
+span {
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+    color: white;
+}
+
+input {
+    color: white;
+}
+
+#login {
+    left: 50px;
+}
+
+#login input {
+    font-size: 15px;
+}
+
+#register {
+    left: 450px;
+}
+
+#register input {
+    font-size: 15px;
+}
