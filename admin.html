@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/admin.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <title>Capcaps Admin</title>
+</head>
+<body>
+    <div class="fcontainer">
+        <header>
+            <marquee>Selamat Datang Di Webpage Admin Kesayangan 😍</marquee>
+        </header>
+        <div class="card">
+            <div>
+                <label for="">Tampilkan Data Pemesanan Dengan Kriteria:</label> <br>
+                <a href="">Kembali ke Home Page</a>
+                <span>|</span>
+                <a href="">Hapus Data Pemesanan Yang Sudah Lewat Hari Ini</a>
+            </div>
+            <div class="option">
+                <select name="table" id="buttonmenu">
+                    <option value="0">Pilih Table</option>
+                    <option value="customer">Customer</option>
+                    <option value="room">Room</option>
+                    <option value="pegawai">Pegawai</option>
+                </select>
+                <select name="table" id="buttonmenu1">
+                    <option value="0">Pilih Table</option>
+                    <option value="customer">Customer</option>
+                    <option value="room">Room</option>
+                    <option value="pegawai">Pegawai</option>
+                </select>
+                <select name="table" id="buttonmenu2">
+                    <option value="0">Pilih Table</option>
+                    <option value="customer">Customer</option>
+                    <option value="room">Room</option>
+                    <option value="pegawai">Pegawai</option>
+                </select>
+            </div>
+            <div class="input">
+                <!-- Column 1 -->
+                <input type="text" name="Nama Customer" id="nama_customer" value="" placeholder="Nama Customer" hidden />
+                <select name="Nama Ruangan" id="nama_ruangan" hidden>
+                    <option value="">--Choose Rooms--</option>
+                    <option value="">Standard Room</option>
+                    <option value="">Deluxe Room</option>
+                    <option value="">Presidential Suite</option>
+                    <option value="">Connecting Room</option>
+                </select>
+                <input type="text" name="Nama Pegawai" id="nama_pegawai" value="" placeholder="Nama Pegawai" hidden />
+
+                <!-- Column 2 -->
+                <input type="text" name="Nama Customer" id="nama_customer1" value="" placeholder="Nama Customer" hidden />
+                <select name="Nama Ruangan" id="nama_ruangan1" hidden>
+                    <option value="">--Choose Rooms--</option>
+                    <option value="">Standard Room</option>
+                    <option value="">Deluxe Room</option>
+                    <option value="">Presidential Suite</option>
+                    <option value="">Connecting Room</option>
+                </select>
+                <input type="text" name="Nama Pegawai" id="nama_pegawai1" value="" placeholder="Nama Pegawai" hidden />
+                
+                <!-- Column 3 -->
+                <input type="text" name="Nama Customer" id="nama_customer2" value="" placeholder="Nama Customer" hidden />
+                <select name="Nama Ruangan" id="nama_ruangan2" hidden>
+                    <option value="">--Choose Rooms--</option>
+                    <option value="">Standard Room</option>
+                    <option value="">Deluxe Room</option>
+                    <option value="">Presidential Suite</option>
+                    <option value="">Connecting Room</option>
+                </select>
+                <input type="text" name="Nama Pegawai" id="nama_pegawai2" value="" placeholder="Nama Pegawai" hidden />
+            </div>
+            <div class="button">
+                <button type="button">Tampilkan Data</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="header_table">
+                <h2>Table</h2>
+            </div>
+            <table border="2" width="100%">
+                <tr>
+                    <th>Booking ID</th>
+                    <th>ID Customer</th>
+                    <th>Room ID</th>
+                    <th>Payment Method</th>
+                    <th>Check In</th>
+                    <th>Check Out</th>
+                    <th>ID Employee</th>
+                </tr>
+                <tr>
+                    <td>121203</td>
+                    <td>121</td>
+                    <td>PDN</td>
+                    <td>ATM Transfer</td>
+                    <td>12 Desember 2003</td>
+                    <td>06 Juni 2022</td>
+                    <td>021</td>
+                </tr>
+                <tr>
+                    <td>121203</td>
+                    <td>121</td>
+                    <td>PDN</td>
+                    <td>ATM Transfer</td>
+                    <td>12 Desember 2003</td>
+                    <td>06 Juni 2022</td>
+                    <td>021</td>
+                </tr>
+                <tr>
+                    <td>121203</td>
+                    <td>121</td>
+                    <td>PDN</td>
+                    <td>ATM Transfer</td>
+                    <td>12 Desember 2003</td>
+                    <td>06 Juni 2022</td>
+                    <td>021</td>
+                </tr>
+                <tr>
+                    <td>121203</td>
+                    <td>121</td>
+                    <td>PDN</td>
+                    <td>ATM Transfer</td>
+                    <td>12 Desember 2003</td>
+                    <td>06 Juni 2022</td>
+                    <td>021</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- COLUMN 1 LIST -->
+        <!-- customer Column 1-->
+        <script type='text/javascript'>
+            $(window).load(function(){
+            $("#buttonmenu").change(function() {
+                        console.log($("#buttonmenu option:selected").val());
+                        if ($("#buttonmenu option:selected").val() == '0') {
+                            $('#customer').prop('hidden', 'true');
+                        } else if ($("#buttonmenu option:selected").val() == 'room') {
+                            $('#customer').prop('hidden', 'true');
+                        } else if ($("#buttonmenu option:selected").val() == 'pegawai') {
+                            $('#customer').prop('hidden', 'true');
+                        } else {
+                            $('#customer').prop('hidden', false);
+                        }
+                    });
+            });
+        </script>
+
+        <!-- Room Column 1-->
+        <script type='text/javascript'>
+            $(window).load(function(){
+            $("#buttonmenu").change(function() {
+                        console.log($("#buttonmenu option:selected").val());
+                        if ($("#buttonmenu option:selected").val() == '0') {
+                            $('#room').prop('hidden', 'true');
+                        } else if ($("#buttonmenu option:selected").val() == 'customer') {
+                            $('#room').prop('hidden', 'true');
+                        } else if ($("#buttonmenu option:selected").val() == 'pegawai') {
+                            $('#room').prop('hidden', 'true');
+                        } else {
+                            $('#room').prop('hidden', false);
+                        }
+                    });
+            });
+        </script>
+
+        <!-- JS List Pegawai Column 1-->
+        <script type='text/javascript'>
+            $(window).load(function(){
+            $("#buttonmenu").change(function() {
+                        console.log($("#buttonmenu option:selected").val());
+                        if ($("#buttonmenu option:selected").val() == '0') {
+                            $('#pegawai').prop('hidden', 'true');
+                        } else if ($("#buttonmenu option:selected").val() == 'customer') {
+                            $('#pegawai').prop('hidden', 'true');
+                        } else if ($("#buttonmenu option:selected").val() == 'room') {
+                            $('#pegawai').prop('hidden', 'true');
+                        } else {
+                            $('#pegawai').prop('hidden', false);
+                        }
+                    });
+            });
+        </script>
+        <!-- COLUMN 1 LIST -->
+
+
+        <!-- COLUMN 2 LIST -->
+        <!-- Customer column 2 -->
+        <script type='text/javascript'>
+            $(window).load(function(){
+            $("#buttonmenu1").change(function() {
+                        console.log($("#buttonmenu1 option:selected").val());
+                        if ($("#buttonmenu1 option:selected").val() == '0') {
+                            $('#customer1').prop('hidden', 'true');
+                        } else if ($("#buttonmenu1 option:selected").val() == 'room') {
+                            $('#customer1').prop('hidden', 'true');
+                        } else if ($("#buttonmenu1 option:selected").val() == 'pegawai') {
+                            $('#customer1').prop('hidden', 'true');
+                        } else {
+                            $('#customer1').prop('hidden', false);
+                        }
+                    });
+            });
+        </script>
+
+        <!-- Room Column 2-->
+        <script type='text/javascript'>
+            $(window).load(function(){
+            $("#buttonmenu1").change(function() {
+                        console.log($("#buttonmenu1 option:selected").val());
+                        if ($("#buttonmenu1 option:selected").val() == '0') {
+                            $('#room1').prop('hidden', 'true');
+                        } else if ($("#buttonmenu1 option:selected").val() == 'customer') {
+                            $('#room1').prop('hidden', 'true');
+                        } else if ($("#buttonmenu1 option:selected").val() == 'pegawai') {
+                            $('#room1').prop('hidden', 'true');
+                        } else {
+                            $('#room1').prop('hidden', false);
+                        }
+                    });
+            });
+        </script>
+
+        <!-- Pegawai Column 2-->
+        <script type='text/javascript'>
+            $(window).load(function(){
+            $("#buttonmenu1").change(function() {
+                        console.log($("#buttonmenu1 option:selected").val());
+                        if ($("#buttonmenu1 option:selected").val() == '0') {
+                            $('#pegawai1').prop('hidden', 'true');
+                        } else if ($("#buttonmenu1 option:selected").val() == 'customer') {
+                            $('#pegawai1').prop('hidden', 'true');
+                        } else if ($("#buttonmenu1 option:selected").val() == 'room') {
+                            $('#pegawai1').prop('hidden', 'true');
+                        } else {
+                            $('#pegawai1').prop('hidden', false);
+                        }
+                    });
+            });
+        </script>
+        <!-- COLUMN 2 LIST -->
+
+        <!-- COLUMN 3 LIST -->
+        <!-- Customer Column 3 -->
+        <script type='text/javascript'>
+            $(window).load(function(){
+            $("#buttonmenu2").change(function() {
+                        console.log($("#buttonmenu2 option:selected").val());
+                        if ($("#buttonmenu2 option:selected").val() == '0') {
+                            $('#customer2').prop('hidden', 'true');
+                        } else if ($("#buttonmenu2 option:selected").val() == 'room') {
+                            $('#customer2').prop('hidden', 'true');
+                        } else if ($("#buttonmenu2 option:selected").val() == 'pegawai') {
+                            $('#customer2').prop('hidden', 'true');
+                        } else {
+                            $('#customer2').prop('hidden', false);
+                        }
+                    });
+            });
+        </script>
+
+        <!-- Room Column 3-->
+        <script type='text/javascript'>
+            $(window).load(function(){
+            $("#buttonmenu2").change(function() {
+                        console.log($("#buttonmenu2 option:selected").val());
+                        if ($("#buttonmenu2 option:selected").val() == '0') {
+                            $('#room2').prop('hidden', 'true');
+                        } else if ($("#buttonmenu2 option:selected").val() == 'customer') {
+                            $('#room2').prop('hidden', 'true');
+                        } else if ($("#buttonmenu2 option:selected").val() == 'pegawai') {
+                            $('#room2').prop('hidden', 'true');
+                        } else {
+                            $('#room2').prop('hidden', false);
+                        }
+                    });
+            });
+        </script>
+
+        <!-- Pegawai Column 3-->
+        <script type='text/javascript'>
+            $(window).load(function(){
+            $("#buttonmenu2").change(function() {
+                        console.log($("#buttonmenu2 option:selected").val());
+                        if ($("#buttonmenu2 option:selected").val() == '0') {
+                            $('#pegawai2').prop('hidden', 'true');
+                        } else if ($("#buttonmenu2 option:selected").val() == 'customer') {
+                            $('#pegawai2').prop('hidden', 'true');
+                        } else if ($("#buttonmenu2 option:selected").val() == 'room') {
+                            $('#pegawai2').prop('hidden', 'true');
+                        } else {
+                            $('#pegawai2').prop('hidden', false);
+                        }
+                    });
+            });
+        </script>
+        <!-- COLUMN 3 LIST -->
+
+
+        <!-- COLUMN 1 DATA LIST -->
+        <div class="card1">
+            <div class="containerlist">
+                <div class="note" id="customer" hidden>
+                    <h2><sup>*</sup>NOTE - Nama Customer</h2><hr color="black" size="1" style="margin-top: 15px;">   
+                    <ol class="listpegawai">
+                        <li>Mohammad</li>
+                        <li>Mohammad</li>
+                        <li>Mohammad</li>
+                        <li>Mohammad</li>
+                        <li>Mohammad</li>
+                        <li>Mohammad</li>
+                        <li>Mohammad</li>
+                        <li>Mohammad</li>
+                    </ol>
+                </div>
+                <div class="note" id="room" hidden>
+                    <h2><sup>*</sup>NOTE - Nama Ruangan</h2><hr color="black" size="1" style="margin-top: 15px;">   
+                    <ol class="listpegawai">
+                        <li>Mohammad Arif</li>
+                        <li>Mohammad Arif</li>
+                        <li>Mohammad Arif</li>
+                        <li>Mohammad Arif</li>
+                        <li>Mohammad Arif</li>
+                    </ol>
+                </div>
+                <div class="note" id="pegawai" hidden>
+                    <h2><sup>*</sup>NOTE - Nama Pegawai</h2><hr color="black" size="1" style="margin-top: 15px;">   
+                    <ol class="listpegawai">
+                        <li>Mohammad Arif Fadhilah</li>
+                        <li>Mohammad Arif Fadhilah</li>
+                        <li>Mohammad Arif Fadhilah</li>
+                        <li>Mohammad Arif Fadhilah</li>
+                        <li>Mohammad Arif Fadhilah</li>
+                    </ol>
+                </div>
+            </div>
+        <!-- COLUMN 1 DATA LIST -->
+
+
+        <!-- COLUMN 2 DATA LIST -->
+            <div class="containerlist">
+                <div class="note" id="customer1" hidden>
+                    <h2><sup>*</sup>NOTE - Nama Customer</h2><hr color="black" size="1" style="margin-top: 15px;">      
+                    <ol class="listpegawai">
+                        <li>Mohammad</li>
+                        <li>Mohammad</li>
+                        <li>Mohammad</li>
+                        <li>Mohammad</li>
+                        <li>Mohammad</li>
+                    </ol>
+                </div>
+                <div class="note" id="room1" hidden>
+                    <h2><sup>*</sup>NOTE - Nama Ruangan</h2><hr color="black" size="1" style="margin-top: 15px;">   
+                    <ol class="listpegawai">
+                        <li>Mohammad Arif</li>
+                        <li>Mohammad Arif</li>
+                        <li>Mohammad Arif</li>
+                        <li>Mohammad Arif</li>
+                        <li>Mohammad Arif</li>
+                    </ol>
+                </div>
+                <div class="note" id="pegawai1" hidden>
+                    <h2><sup>*</sup>NOTE - Nama Pegawai</h2><hr color="black" size="1" style="margin-top: 15px;">   
+                    <ol class="listpegawai">
+                        <li>Mohammad Arif Fadhilah</li>
+                        <li>Mohammad Arif Fadhilah</li>
+                        <li>Mohammad Arif Fadhilah</li>
+                        <li>Mohammad Arif Fadhilah</li>
+                        <li>Mohammad Arif Fadhilah</li>
+                    </ol>
+                </div>
+            </div>
+        <!-- COLUMN 2 DATA LIST -->
+
+
+        <!-- COLUMN 3 DATA LIST -->
+            <div class="containerlist">
+                <div class="note" id="customer2" hidden>
+                    <h2><sup>*</sup>NOTE - Nama Customer</h2><hr color="black" size="1" style="margin-top: 15px;">      
+                    <ol class="listpegawai">
+                        <li>Mohammad</li>
+                        <li>Mohammad</li>
+                        <li>Mohammad</li>
+                        <li>Mohammad</li>
+                        <li>Mohammad</li>
+                    </ol>
+                </div>
+                <div class="note" id="room2" hidden>
+                    <h2><sup>*</sup>NOTE - Nama Ruangan</h2><hr color="black" size="1" style="margin-top: 15px;">   
+                    <ol class="listpegawai">
+                        <li>Mohammad Arif</li>
+                        <li>Mohammad Arif</li>
+                        <li>Mohammad Arif</li>
+                        <li>Mohammad Arif</li>
+                        <li>Mohammad Arif</li>
+                    </ol>
+                </div>
+                <div class="note" id="pegawai2" hidden>
+                    <h2><sup>*</sup>NOTE - Nama Pegawai</h2><hr color="black" size="1" style="margin-top: 15px;">   
+                    <ol class="listpegawai">
+                        <li>Mohammad Arif Fadhilah</li>
+                        <li>Mohammad Arif Fadhilah</li>
+                        <li>Mohammad Arif Fadhilah</li>
+                        <li>Mohammad Arif Fadhilah</li>
+                        <li>Mohammad Arif Fadhilah</li>
+                    </ol>
+                </div>
+            </div>
+        <!-- COLUMN 3 DATA LIST -->
+        </div>
+    </div>
+    
+
+
+    <!-- Customer Column 1 -->
+    <script type='text/javascript'>
+        $(window).load(function(){
+        $("#buttonmenu").change(function() {
+                    console.log($("#buttonmenu option:selected").val());
+                    if ($("#buttonmenu option:selected").val() == 'room') {
+                        $('#nama_customer').prop('hidden', 'true');
+                    } else if ($("#buttonmenu option:selected").val() == 'pegawai') {
+                        $('#nama_customer').prop('hidden', 'true');
+                    } else if ($("#buttonmenu option:selected").val() == '0') {
+                        $('#nama_customer').prop('hidden', 'true');
+                    } else {
+                        $('#nama_customer').prop('hidden', false);
+                    }
+                });
+        });
+    </script>
+
+    <!-- Customer column 2 -->
+    <script type='text/javascript'>
+        $(window).load(function(){
+        $("#buttonmenu1").change(function() {
+                    console.log($("#buttonmenu1 option:selected").val());
+                    if ($("#buttonmenu1 option:selected").val() == 'room') {
+                        $('#nama_customer1').prop('hidden', 'true');
+                    } else if ($("#buttonmenu1 option:selected").val() == 'pegawai') {
+                        $('#nama_customer1').prop('hidden', 'true');
+                    } else if ($("#buttonmenu1 option:selected").val() == '0') {
+                        $('#nama_customer1').prop('hidden', 'true');
+                    } else {
+                        $('#nama_customer1').prop('hidden', false);
+                    }
+                });
+        });
+    </script>
+
+    <!-- Customer Column 3 -->
+    <script type='text/javascript'>
+        $(window).load(function(){
+        $("#buttonmenu2").change(function() {
+                    console.log($("#buttonmenu2 option:selected").val());
+                    if ($("#buttonmenu2 option:selected").val() == 'room') {
+                        $('#nama_customer2').prop('hidden', 'true');
+                    } else if ($("#buttonmenu2 option:selected").val() == 'pegawai') {
+                        $('#nama_customer2').prop('hidden', 'true');
+                    } else if ($("#buttonmenu2 option:selected").val() == '0') {
+                        $('#nama_customer2').prop('hidden', 'true');
+                    } else {
+                        $('#nama_customer2').prop('hidden', false);
+                    }
+                });
+        });
+    </script>
+
+
+
+    <!-- Room Column 1-->
+    <script type='text/javascript'>
+        $(window).load(function(){
+        $("#buttonmenu").change(function() {
+                    console.log($("#buttonmenu option:selected").val());
+                    if ($("#buttonmenu option:selected").val() == 'customer') {
+                        $('#nama_ruangan').prop('hidden', 'true');
+                    } else if ($("#buttonmenu option:selected").val() == 'pegawai') {
+                        $('#nama_ruangan').prop('hidden', 'true');
+                    } else if ($("#buttonmenu option:selected").val() == '0') {
+                        $('#nama_ruangan').prop('hidden', 'true');
+                    } else {
+                        $('#nama_ruangan').prop('hidden', false);
+                    }
+                });
+        });
+    </script>
+
+    <!-- Room Column 2-->
+    <script type='text/javascript'>
+        $(window).load(function(){
+        $("#buttonmenu1").change(function() {
+                    console.log($("#buttonmenu1 option:selected").val());
+                    if ($("#buttonmenu1 option:selected").val() == 'customer') {
+                        $('#nama_ruangan1').prop('hidden', 'true');
+                    } else if ($("#buttonmenu1 option:selected").val() == 'pegawai') {
+                        $('#nama_ruangan1').prop('hidden', 'true');
+                    } else if ($("#buttonmenu1 option:selected").val() == '0') {
+                        $('#nama_ruangan1').prop('hidden', 'true');
+                    } else {
+                        $('#nama_ruangan1').prop('hidden', false);
+                    }
+                });
+        });
+    </script>
+
+    <!-- Room Column 3-->
+    <script type='text/javascript'>
+        $(window).load(function(){
+        $("#buttonmenu2").change(function() {
+                    console.log($("#buttonmenu2 option:selected").val());
+                    if ($("#buttonmenu2 option:selected").val() == 'customer') {
+                        $('#nama_ruangan2').prop('hidden', 'true');
+                    } else if ($("#buttonmenu2 option:selected").val() == 'pegawai') {
+                        $('#nama_ruangan2').prop('hidden', 'true');
+                    } else if ($("#buttonmenu2 option:selected").val() == '0') {
+                        $('#nama_ruangan2').prop('hidden', 'true');
+                    } else {
+                        $('#nama_ruangan2').prop('hidden', false);
+                    }
+                });
+        });
+    </script>
+
+
+
+    <!-- Pegawai Column 1-->
+    <script type='text/javascript'>
+        $(window).load(function(){
+        $("#buttonmenu").change(function() {
+                    console.log($("#buttonmenu option:selected").val());
+                    if ($("#buttonmenu option:selected").val() == 'customer') {
+                        $('#nama_pegawai').prop('hidden', 'true');
+                    } else if ($("#buttonmenu option:selected").val() == 'room') {
+                        $('#nama_pegawai').prop('hidden', 'true');
+                    } else if ($("#buttonmenu option:selected").val() == '0') {
+                        $('#nama_pegawai').prop('hidden', 'true');
+                    } else {
+                        $('#nama_pegawai').prop('hidden', false);
+                    }
+                });
+        });
+    </script>
+
+    <!-- Pegawai Column 2-->
+    <script type='text/javascript'>
+        $(window).load(function(){
+        $("#buttonmenu1").change(function() {
+                    console.log($("#buttonmenu1 option:selected").val());
+                    if ($("#buttonmenu1 option:selected").val() == 'customer') {
+                        $('#nama_pegawai1').prop('hidden', 'true');
+                    } else if ($("#buttonmenu1 option:selected").val() == 'room') {
+                        $('#nama_pegawai1').prop('hidden', 'true');
+                    } else if ($("#buttonmenu1 option:selected").val() == '0') {
+                        $('#nama_pegawai1').prop('hidden', 'true');
+                    } else {
+                        $('#nama_pegawai1').prop('hidden', false);
+                    }
+                });
+        });
+    </script>
+
+    <!-- Pegawai Column 3-->
+    <script type='text/javascript'>
+        $(window).load(function(){
+        $("#buttonmenu2").change(function() {
+                    console.log($("#buttonmenu2 option:selected").val());
+                    if ($("#buttonmenu2 option:selected").val() == 'customer') {
+                        $('#nama_pegawai2').prop('hidden', 'true');
+                    } else if ($("#buttonmenu2 option:selected").val() == 'room') {
+                        $('#nama_pegawai2').prop('hidden', 'true');
+                    } else if ($("#buttonmenu2 option:selected").val() == '0') {
+                        $('#nama_pegawai2').prop('hidden', 'true');
+                    } else {
+                        $('#nama_pegawai2').prop('hidden', false);
+                    }
+                });
+        });
+    </script>
+</body>
+</html>
